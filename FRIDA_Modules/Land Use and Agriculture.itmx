@@ -529,6 +529,8 @@ This isn&apos;t in the uncertainty analysis b/c it needs to be integrated with t
 				<connect2 to="Land_Use.Livestock_Yield" from="Animal_Products.Grazing_Land_Animal_Products_Yield"/>
 				<connect to="Land_Use.Policy_Start_Year" from="Government_Regulations.start_year"/>
 				<connect2 to="Land_Use.Policy_Start_Year" from="Government_Regulations.start_year"/>
+				<connect to="Land_Use.Surface_Temperature_Anomaly" from="Energy_Balance_Model.Surface_Temperature_Anomaly"/>
+				<connect2 to="Land_Use.Surface_Temperature_Anomaly" from="Energy_Balance_Model.Surface_Temperature_Anomaly"/>
 			</module>
 			<stock name="Grassland" access="input">
 				<dimensions>
@@ -977,7 +979,7 @@ This isn&apos;t in the uncertainty analysis b/c it needs to be integrated with t
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="1123" page_height="793" isee:page_cols="5" isee:page_rows="2" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="758" page_height="574" isee:page_cols="5" isee:page_rows="2" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="12.51pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -1266,7 +1268,7 @@ aquatic_animal_product_share_1980*(perceived_GDP_per_person/INIT(perceived_GDP_p
 				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
 				<units>bc$/Mp/year</units>
 			</aux>
-			<aux name="elasticity of aquatic animal product share to GDP per person">
+			<aux name="elasticity of aquatic animal\nproduct share to GDP per person">
 				<doc>${Internal Calibration Parameter}
 </doc>
 				<dimensions>
@@ -1520,7 +1522,7 @@ Not in sensi analysis because this is so far outside the range of where calibrat
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="2" isee:page_rows="2" isee:scroll_x="364.286" isee:scroll_y="185" zoom="140" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="758" page_height="574" isee:page_cols="2" isee:page_rows="2" isee:scroll_x="492.5" zoom="80" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -1599,7 +1601,7 @@ Not in sensi analysis because this is so far outside the range of where calibrat
 					<from>perceived_GDP_per_person</from>
 					<to>aquatic_animal_product_share</to>
 				</connector>
-				<aux x="1409" y="423" name="elasticity of aquatic animal product share to GDP per person"/>
+				<aux x="1409" y="423" name="elasticity of aquatic animal\nproduct share to GDP per person"/>
 				<connector uid="13" angle="200.631">
 					<from>elasticity_of_aquatic_animal_product_share_to_GDP_per_person</from>
 					<to>aquatic_animal_product_share</to>
@@ -5372,7 +5374,7 @@ ELSE
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="2" isee:page_rows="3" isee:scroll_y="180" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="754" page_height="578" isee:page_cols="2" isee:page_rows="3" isee:scroll_x="696" isee:scroll_y="548" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -6019,7 +6021,7 @@ Limits for extreme conditions in no feedback cases</doc>
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="2" isee:page_rows="2" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="754" page_height="578" isee:page_cols="2" isee:page_rows="2" isee:scroll_x="276.25" isee:scroll_y="97.5" zoom="80" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -6657,10 +6659,12 @@ Food and Agriculture Organization of the United Nations (2023)</doc>
 				<eqn>Crop_Land_1980</eqn>
 				<inflow>clearing_forests_for_crops</inflow>
 				<inflow>clearing_grassland</inflow>
+				<inflow>recovering_cropland</inflow>
 				<outflow>reforesting_cropland</outflow>
 				<outflow>fallowing_cropland</outflow>
 				<outflow>degraded_land_from_crops</outflow>
 				<outflow>forresting_cropland</outflow>
+				<outflow>burning_cropland</outflow>
 				<units>Mha</units>
 			</stock>
 			<stock name="Mature Forest" access="output" isee:autocreated="true">
@@ -6674,6 +6678,7 @@ Food and Agriculture Organization of the United Nations (2023)</doc>
 				<outflow>clearing_forests_for_crops</outflow>
 				<outflow>clearing_forest_for_grassland</outflow>
 				<outflow>cutting</outflow>
+				<outflow>burning_mature_forest</outflow>
 				<units>Mha</units>
 			</stock>
 			<flow name="clearing forests\nfor crops" access="output">
@@ -6691,10 +6696,12 @@ Food and Agriculture Organization of the United Nations (2023)</doc>
 				<eqn>Grassland_1980</eqn>
 				<inflow>fallowing_cropland</inflow>
 				<inflow>clearing_forest_for_grassland</inflow>
+				<inflow>recovering_grassland</inflow>
 				<outflow>clearing_grassland</outflow>
 				<outflow>foresting_grassland</outflow>
 				<outflow>reforesting_grassland</outflow>
 				<outflow>degraded_land_from_grassland</outflow>
+				<outflow>burning_grassland</outflow>
 				<units>Mha</units>
 			</stock>
 			<flow name="clearing grassland" access="output" isee:autocreated="true">
@@ -6851,7 +6858,9 @@ Calibration Parameter: forest land &amp; CO2 emissions from land cover change &a
 				<inflow>foresting_degraded_land</inflow>
 				<inflow>forresting_cropland</inflow>
 				<inflow>cutting</inflow>
+				<inflow>recovering_forest</inflow>
 				<outflow>forest_completing_recovery</outflow>
+				<outflow>burning_young_forest</outflow>
 				<non_negative/>
 				<units>Mha</units>
 			</stock>
@@ -7266,6 +7275,232 @@ Used for policy implementation only.</doc>
 				<eqn>2.49242261286435</eqn>
 				<units>PCal/(Mha*year)</units>
 			</aux>
+			<aux name="total overburned area\npercent due to climate\nchange">
+				<doc>refer to Fig 3 Supplementary global Burton et al 2024</doc>
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>parameter_a*Surface_Temperature_Anomaly^2 + parameter_b*Surface_Temperature_Anomaly + parameter_c</eqn>
+				<units>percent</units>
+			</aux>
+			<aux name="parameter a">
+				<doc>${Climate Impact Parameter}
+Values derived from Burton et al 2024, catherines github for derivation. </doc>
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>-0.13265891</eqn>
+				<units>percent/deg C^2</units>
+			</aux>
+			<aux name="parameter b">
+				<doc>${Climate Impact Parameter}
+Values derived from Burton et al 2024, catherines github for derivation. </doc>
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>11.5377111</eqn>
+				<units>percent/(deg C)</units>
+			</aux>
+			<aux name="parameter c">
+				<doc>${Climate Impact Parameter}
+Values derived from Burton et al 2024, catherines github for derivation. </doc>
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>0.61357145</eqn>
+				<units>percent</units>
+			</aux>
+			<aux name="counterfactual aka no climate change\nmean burned area\nMhain 1980">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn> {this is the mean centered on 1980, but do need to link to calibration data?}
+
+455.230456543096</eqn>
+				<units>Mha/year</units>
+			</aux>
+			<aux name="global burned area\ndue to climate change">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>total_overburned_area_percent_due_to_climate_change/unit_percent *counterfactual_aka_no_climate_change_mean_burned_area_Mhain_1980[Run]
+
+
+{does this need to also be added to the counterfactual? }</eqn>
+				<units>Mha/year</units>
+			</aux>
+			<aux name="fraction of grassland\nburned out of\ntotal burned area">
+				<doc>Derived from OurWorldInData</doc>
+				<eqn>0.921258302</eqn>
+				<units>dmnl</units>
+			</aux>
+			<aux name="grassland\nburned due to cc\narea">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>global_burned_area_due_to_climate_change*fraction_of_grassland_burned_out_of_total_burned_area</eqn>
+				<units>Mha/year</units>
+			</aux>
+			<aux name="fraction of\ncropland\nburned out of\ntotal\nburned area">
+				<doc>Derived from OurWorldInData</doc>
+				<eqn>0.038786054</eqn>
+				<units>dmnl</units>
+			</aux>
+			<aux name="cropland\nburned due\nto cc">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>global_burned_area_due_to_climate_change*fraction_of_cropland_burned_out_of_total_burned_area</eqn>
+				<units>Mha/year</units>
+			</aux>
+			<aux name="forest\nburned\ndue to cc">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>global_burned_area_due_to_climate_change*fraction_of_forest_burned_out_of_total_burned_area</eqn>
+				<units>Mha/year</units>
+			</aux>
+			<aux name="fraction of\nforest\nburned out of total\nburned area">
+				<doc>Derived from OurWorldInData</doc>
+				<eqn>0.03995564</eqn>
+				<units>dmnl</units>
+			</aux>
+			<aux name="mature forest\nburned due t\no cc">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>{mature forest/total forest *forest overburned area} 
+forest_burned_due_to_cc*fraction_of_mature_forest_out_of_total_forest</eqn>
+				<units>Mha/year</units>
+			</aux>
+			<aux name="young forest\nburned due\nto cc">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>{young forest/total forest *forest overburned area} forest_burned_due_to_cc*fraction_of_young_forest_out_of_total_forest</eqn>
+				<units>Mha/year</units>
+			</aux>
+			<aux name="fraction of young\nforest out of total forest">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>Young_Forest[1] / (Mature_Forest[1]+Young_Forest[1])</eqn>
+				<units>dmnl</units>
+			</aux>
+			<aux name="fraction of mature\nforest out of total forest">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>Mature_Forest[1] /(Young_Forest[1]+Mature_Forest[1])</eqn>
+				<units>dmnl</units>
+			</aux>
+			<aux name="Surface Temperature Anomaly" access="input">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
+				<units>deg C</units>
+			</aux>
+			<stock name="Burned Cropland">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>0</eqn>
+				<inflow>burning_cropland</inflow>
+				<outflow>recovering_cropland</outflow>
+				<units>Mha</units>
+			</stock>
+			<flow name="burning cropland">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>cropland_burned_due_to_cc</eqn>
+				<non_negative/>
+				<units>Mha/year</units>
+			</flow>
+			<flow name="recovering cropland">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>Burned_Cropland/time_for_burned_cropland_to_recover</eqn>
+				<non_negative/>
+				<units>Mha/year</units>
+			</flow>
+			<aux name="time for burned cropland to recover">
+				<eqn>2</eqn>
+				<units>Year</units>
+			</aux>
+			<aux name="unit percent">
+				<eqn>100</eqn>
+				<units>percent</units>
+			</aux>
+			<stock name="Burned Forest">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>0</eqn>
+				<inflow>burning_mature_forest</inflow>
+				<inflow>burning_young_forest</inflow>
+				<outflow>recovering_forest</outflow>
+				<units>Mha</units>
+			</stock>
+			<flow name="burning mature forest">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>mature_forest_burned_due_t_o_cc</eqn>
+				<non_negative/>
+				<units>Mha/year</units>
+			</flow>
+			<flow name="burning young forest">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>young_forest_burned_due_to_cc</eqn>
+				<non_negative/>
+				<units>Mha/year</units>
+			</flow>
+			<flow name="recovering forest">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>Burned_Forest/time_for_burned_forest_to_recover</eqn>
+				<non_negative/>
+				<units>Mha/year</units>
+			</flow>
+			<aux name="time for burned forest to recover">
+				<eqn>4</eqn>
+				<units>Years</units>
+			</aux>
+			<stock name="Burned Grassland">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>0</eqn>
+				<inflow>burning_grassland</inflow>
+				<outflow>recovering_grassland</outflow>
+				<units>Mha</units>
+			</stock>
+			<flow name="burning grassland">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>grassland_burned_due_to_cc_area</eqn>
+				<non_negative/>
+				<units>Mha/year</units>
+			</flow>
+			<flow name="recovering grassland">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>Burned_Grassland/time_for_grassland_to_recover</eqn>
+				<non_negative/>
+				<units>Mha/year</units>
+			</flow>
+			<aux name="time for grassland to recover">
+				<eqn>1</eqn>
+				<units>Years</units>
+			</aux>
 		</variables>
 		<views>
 			<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
@@ -7315,7 +7550,7 @@ Used for policy implementation only.</doc>
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="3" isee:page_rows="2" isee:scroll_x="810" isee:scroll_y="342" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="758" page_height="574" isee:page_cols="4" isee:page_rows="5" isee:scroll_x="621.25" isee:scroll_y="123.75" zoom="80" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -7338,7 +7573,7 @@ Used for policy implementation only.</doc>
 					<graph color="black" background="white" font_size="12pt" axis_color="#666666" grid_color="#C8C8C8" isee:graph_area_color="white" legend_position="bottom" isee:transparent="false" isee:hide_border="false" axis_title_font_style="normal" axis_title_font_weight="normal" axis_title_text_decoration="none" axis_title_text_align="center" axis_title_vertical_text_align="center" axis_title_font_color="black" axis_title_font_family="Arial" axis_title_font_size="12pt" axis_title_text_padding="2" axis_title_text_border_color="black" axis_title_text_border_width="thin" axis_title_text_border_style="none" axis_label_font_style="normal" axis_label_font_weight="normal" axis_label_text_decoration="none" axis_label_text_align="center" axis_label_vertical_text_align="center" axis_label_font_color="black" axis_label_font_family="Arial" axis_label_font_size="9pt" axis_label_text_padding="2" axis_label_text_border_color="black" axis_label_text_border_width="thin" axis_label_text_border_style="none">
 						<isee:series_styles>
 							<isee:series_style color="blue" thickness="1"/>
-							<isee:series_style color="red" thickness="1"/>
+							<isee:series_style color="#00A82E" thickness="1"/>
 							<isee:series_style color="fuchsia" thickness="1"/>
 							<isee:series_style color="#008F44" thickness="1"/>
 							<isee:series_style color="#FF7F00" thickness="1"/>
@@ -7354,50 +7589,50 @@ Used for policy implementation only.</doc>
 					</graph>
 					<table color="black" background="#E0E0E0" text_align="right" font_size="12pt" orientation="vertical" wrap_text="false" isee:auto_fit="true" isee:use_alternate_row_colors="false" isee:unlimited_table_length="false" blank_column_width="80" column_width="160" interval="1" report_balances="beginning" report_flows="instantaneous" header_font_style="normal" header_font_weight="normal" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="12pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 				</style>
-				<aux x="1420.5" y="293.5" name="Crop Land 1980"/>
-				<aux x="1383" y="659" name="Habitable Land Area"/>
-				<aux x="1412.5" y="234" name="Grassland 1980"/>
-				<aux x="1307.5" y="234" name="Forest Land 1980"/>
-				<stock label_side="center" x="688" y="90.583" width="150" height="90" name="Mature Forest"/>
-				<stock label_side="center" x="691.25" y="355" width="150" height="90" name="Cropland"/>
-				<stock label_side="center" x="691.25" y="693.08" width="150" height="90" name="Grassland"/>
-				<flow background="white" label_side="top" x="755.583" y="251.125" width="21.3333" height="21.3333" name="clearing forests\nfor crops">
+				<aux x="1620.17" y="518.667" name="Crop Land 1980"/>
+				<aux x="1439.67" y="800.667" name="Habitable Land Area"/>
+				<aux x="1581.42" y="449.667" name="Grassland 1980"/>
+				<aux x="1511.67" y="453.167" name="Forest Land 1980"/>
+				<stock label_side="center" x="744.667" y="232.25" width="150" height="90" name="Mature Forest"/>
+				<stock label_side="center" x="747.917" y="496.667" width="150" height="90" name="Cropland"/>
+				<stock label_side="center" x="747.917" y="834.747" width="150" height="90" name="Grassland"/>
+				<flow background="white" label_side="top" x="812.25" y="392.792" width="21.3333" height="21.3333" name="clearing forests\nfor crops">
 					<pts>
-						<pt x="766.25" y="180.583"/>
-						<pt x="766.25" y="355"/>
+						<pt x="822.917" y="322.25"/>
+						<pt x="822.917" y="496.667"/>
 					</pts>
 				</flow>
-				<flow label_side="bottom" x="693.5" y="575.04" name="clearing grassland">
+				<flow label_side="bottom" x="750.167" y="716.707" name="clearing grassland">
 					<pts>
-						<pt x="693.5" y="693.08"/>
-						<pt x="693.5" y="445"/>
+						<pt x="750.167" y="834.747"/>
+						<pt x="750.167" y="586.667"/>
 					</pts>
 				</flow>
-				<aux label_side="top" x="614.25" y="311.5" name="new land\nfor crops"/>
-				<aux label_side="left" x="568.5" y="454" name="fraction of new\ncropland\nfrom forests"/>
+				<aux label_side="top" x="670.917" y="453.167" name="new land\nfor crops"/>
+				<aux label_side="left" label_angle="225" x="629.917" y="698.707" name="fraction of new\ncropland\nfrom forests"/>
 				<connector uid="1" color="#FF007F" angle="75.1414">
 					<from>new_land_for_crops</from>
 					<to>clearing_forests_for_crops</to>
 				</connector>
-				<flow label_side="top" x="972.75" y="361" name="reforesting cropland">
+				<flow label_side="top" x="1029.42" y="502.667" name="reforesting cropland">
 					<pts>
-						<pt x="841.25" y="361"/>
-						<pt x="1116.25" y="361"/>
+						<pt x="897.917" y="502.667"/>
+						<pt x="1172.92" y="502.667"/>
 					</pts>
 				</flow>
-				<flow label_side="top" x="775.91" y="563.04" name="fallowing cropland">
+				<flow label_side="top" x="832.577" y="704.707" name="fallowing cropland">
 					<pts>
-						<pt x="775.91" y="445"/>
-						<pt x="775.91" y="693.08"/>
+						<pt x="832.577" y="586.667"/>
+						<pt x="832.577" y="834.747"/>
 					</pts>
 				</flow>
-				<aux x="1138" y="252" name="normal average time\ncropland in use"/>
-				<aux x="1023.75" y="472.5" name="cropland depleting"/>
+				<aux x="1194.67" y="393.667" name="normal average time\ncropland in use"/>
+				<aux x="1080.42" y="614.167" name="cropland depleting"/>
 				<connector uid="2" angle="51.6705">
 					<from>Cropland</from>
 					<to>cropland_depleting</to>
 				</connector>
-				<aux x="890.25" y="226" name="fraction of\ndepleting cropland\nto grassland"/>
+				<aux x="946.917" y="367.667" name="fraction of\ndepleting cropland\nto grassland"/>
 				<connector uid="4" angle="303.341">
 					<from>cropland_depleting</from>
 					<to>fallowing_cropland</to>
@@ -7414,11 +7649,11 @@ Used for policy implementation only.</doc>
 					<from>fraction_of_depleting_cropland_to_grassland</from>
 					<to>reforesting_cropland</to>
 				</connector>
-				<connector uid="8" angle="44.1859">
+				<connector uid="8" angle="56.8279">
 					<from>fraction_of_new_cropland_from_forests</from>
 					<to>clearing_forests_for_crops</to>
 				</connector>
-				<connector uid="9" angle="315.922">
+				<connector uid="9" angle="351.487">
 					<from>fraction_of_new_cropland_from_forests</from>
 					<to>clearing_grassland</to>
 				</connector>
@@ -7426,37 +7661,37 @@ Used for policy implementation only.</doc>
 					<from>new_land_for_crops</from>
 					<to>clearing_grassland</to>
 				</connector>
-				<flow isee:segment_with_valve="1" x="1188" y="618.915" name="foresting grassland">
+				<flow isee:segment_with_valve="1" x="1244.67" y="760.582" name="foresting grassland">
 					<pts>
-						<pt x="841.25" y="780.83"/>
-						<pt x="1188" y="780.83"/>
-						<pt x="1188" y="445"/>
+						<pt x="897.917" y="922.497"/>
+						<pt x="1244.67" y="922.497"/>
+						<pt x="1244.67" y="586.667"/>
 					</pts>
 				</flow>
-				<flow isee:segment_with_valve="1" x="400" y="432.375" name="clearing forest\nfor grassland">
+				<flow isee:segment_with_valve="1" x="456.667" y="574.042" name="clearing forest\nfor grassland">
 					<pts>
-						<pt x="688" y="119.25"/>
-						<pt x="400" y="119.25"/>
-						<pt x="400" y="745.5"/>
-						<pt x="691.25" y="745.5"/>
+						<pt x="744.667" y="260.917"/>
+						<pt x="456.667" y="260.917"/>
+						<pt x="456.667" y="887.167"/>
+						<pt x="747.917" y="887.167"/>
 					</pts>
 				</flow>
-				<aux x="632.25" y="962.5" name="fraction of grassland for grazing"/>
-				<aux x="614.25" y="880.75" name="grazing land"/>
-				<connector uid="11" angle="251.301">
+				<aux x="642.667" y="1152.67" name="fraction of grassland for grazing"/>
+				<aux x="717.417" y="1113.67" name="grazing land"/>
+				<connector uid="11" angle="273.839">
 					<from>Grassland</from>
 					<to>grazing_land</to>
 				</connector>
-				<connector uid="12" angle="102.417">
+				<connector uid="12" angle="272.777">
 					<from>fraction_of_grassland_for_grazing</from>
 					<to>grazing_land</to>
 				</connector>
-				<aux x="207.75" y="512.04" name="indicated grazing land"/>
-				<connector uid="13" angle="127.811">
+				<aux x="264.417" y="653.707" name="indicated grazing land"/>
+				<connector uid="13" angle="134.563">
 					<from>grazing_land</from>
 					<to>indicated_grazing_land</to>
 				</connector>
-				<aux x="252.88" y="450.5" name="indicated grassland"/>
+				<aux x="309.547" y="592.167" name="indicated grassland"/>
 				<connector uid="14" angle="70.7304">
 					<from>indicated_grazing_land</from>
 					<to>indicated_grassland</to>
@@ -7467,20 +7702,20 @@ Used for policy implementation only.</doc>
 					</from>
 					<to>indicated_grassland</to>
 				</connector>
-				<aux x="241.96" y="326.667" name="time to close\ngrassland gap"/>
+				<aux x="298.627" y="468.334" name="time to close\ngrassland gap"/>
 				<connector uid="17" angle="326.223">
 					<from>time_to_close_grassland_gap</from>
 					<to>clearing_forest_for_grassland</to>
 				</connector>
-				<stock label_side="center" x="1116.25" y="355" width="150" height="90" name="Young Forest"/>
-				<flow x="1023.75" y="128.25" name="forest completing\nrecovery">
+				<stock label_side="center" x="1172.92" y="496.667" width="150" height="90" name="Young Forest"/>
+				<flow x="1080.42" y="269.917" name="forest completing\nrecovery">
 					<pts>
-						<pt x="1197.5" y="355"/>
-						<pt x="1197.5" y="128.25"/>
-						<pt x="838" y="128.25"/>
+						<pt x="1254.17" y="496.667"/>
+						<pt x="1254.17" y="269.917"/>
+						<pt x="894.667" y="269.917"/>
 					</pts>
 				</flow>
-				<aux x="1115" y="58.25" name="forest recovery time"/>
+				<aux x="1171.67" y="199.917" name="forest recovery time"/>
 				<connector uid="18" angle="217.493">
 					<from>forest_recovery_time</from>
 					<to>forest_completing_recovery</to>
@@ -7489,8 +7724,8 @@ Used for policy implementation only.</doc>
 					<from>Young_Forest</from>
 					<to>forest_completing_recovery</to>
 				</connector>
-				<aux x="1534.75" y="792.08" name="Forest Land"/>
-				<aux x="322.5" y="418" name="grassland gap"/>
+				<aux x="1591.42" y="933.747" name="Forest Land"/>
+				<aux x="379.167" y="559.667" name="grassland gap"/>
 				<connector uid="20" angle="25.0241">
 					<from>indicated_grassland</from>
 					<to>grassland_gap</to>
@@ -7503,12 +7738,12 @@ Used for policy implementation only.</doc>
 					<from>grassland_gap</from>
 					<to>clearing_forest_for_grassland</to>
 				</connector>
-				<flow x="992.5" y="993" name="reforesting\ngrassland">
+				<flow x="1049.17" y="1134.67" name="reforesting\ngrassland">
 					<pts>
-						<pt x="763.75" y="783.08"/>
-						<pt x="763.75" y="993"/>
-						<pt x="1221.25" y="993"/>
-						<pt x="1221.25" y="445"/>
+						<pt x="820.417" y="924.747"/>
+						<pt x="820.417" y="1134.67"/>
+						<pt x="1277.92" y="1134.67"/>
+						<pt x="1277.92" y="586.667"/>
 					</pts>
 				</flow>
 				<connector uid="23" angle="259.196">
@@ -7521,8 +7756,8 @@ Used for policy implementation only.</doc>
 					</from>
 					<to>reforesting_grassland</to>
 				</connector>
-				<aux x="1323.75" y="299.5" name="percent of forest\nrecovering in 1980"/>
-				<aux x="422.5" y="261.792" name="indicated cropland"/>
+				<aux x="1511.67" y="518.667" name="percent of forest\nrecovering in 1980"/>
+				<aux x="479.167" y="403.459" name="indicated cropland"/>
 				<connector uid="26" angle="178.008">
 					<from>Cropland</from>
 					<to>indicated_cropland</to>
@@ -7531,7 +7766,7 @@ Used for policy implementation only.</doc>
 					<from>indicated_cropland</from>
 					<to>new_land_for_crops</to>
 				</connector>
-				<aux x="591.25" y="174.5" name="cropland\nexpansion time"/>
+				<aux x="647.917" y="316.167" name="cropland\nexpansion time"/>
 				<connector uid="28" angle="284.036">
 					<from>cropland_expansion_time</from>
 					<to>new_land_for_crops</to>
@@ -7548,27 +7783,27 @@ Used for policy implementation only.</doc>
 					<from>Grassland</from>
 					<to>clearing_grassland</to>
 				</connector>
-				<stock label_side="center" x="988.5" y="515" width="150" height="90" name="Degraded\nLand"/>
-				<flow x="952.375" y="442.75" name="degraded\nland from crops">
+				<stock label_side="center" x="1045.17" y="656.667" width="150" height="90" name="Degraded\nLand"/>
+				<flow x="1009.04" y="584.417" name="degraded\nland from crops">
 					<pts>
-						<pt x="841.25" y="442.75"/>
-						<pt x="1063.5" y="442.75"/>
-						<pt x="1063.5" y="515"/>
+						<pt x="897.917" y="584.417"/>
+						<pt x="1120.17" y="584.417"/>
+						<pt x="1120.17" y="656.667"/>
 					</pts>
 				</flow>
-				<aux x="847" y="472.5" name="fraction cropland\ndegrading 1980"/>
+				<aux x="903.667" y="614.167" name="fraction cropland\ndegrading 1980"/>
 				<connector uid="32" angle="330.457">
 					<from>fraction_cropland_degrading_1980</from>
 					<to>fraction_cropland_degrading</to>
 				</connector>
-				<flow x="952.75" y="725" name="degraded\nland from grassland">
+				<flow x="1009.42" y="866.667" name="degraded\nland from grassland">
 					<pts>
-						<pt x="841.25" y="725"/>
-						<pt x="1064.25" y="725"/>
-						<pt x="1064.25" y="605"/>
+						<pt x="897.917" y="866.667"/>
+						<pt x="1120.92" y="866.667"/>
+						<pt x="1120.92" y="746.667"/>
 					</pts>
 				</flow>
-				<aux x="1107.25" y="862.75" name="fraction of grassland\ndegrading 1980"/>
+				<aux x="1163.92" y="1004.42" name="fraction of grassland\ndegrading 1980"/>
 				<connector uid="33" angle="148.341">
 					<from>fraction_of_grassland_degrading_1980</from>
 					<to>fraction_of_grassland_degrading</to>
@@ -7581,13 +7816,13 @@ Used for policy implementation only.</doc>
 					<from>cropland_depleting</from>
 					<to>new_land_for_crops</to>
 				</connector>
-				<aux x="999" y="796" name="fraction of grassland\ndegrading"/>
+				<aux x="1055.67" y="937.667" name="fraction of grassland\ndegrading"/>
 				<connector uid="36" angle="119.624">
 					<from>fraction_of_grassland_degrading</from>
 					<to>degraded_land_from_grassland</to>
 				</connector>
-				<aux x="920" y="837" name="effect of animal products\nyield on fraction\nof grassland degrading"/>
-				<aux x="789" y="833" name="elasticity of effect of animal products\nyield on fraction\nof grassland degrading"/>
+				<aux x="976.667" y="978.667" name="effect of animal products\nyield on fraction\nof grassland degrading"/>
+				<aux x="845.667" y="974.667" name="elasticity of effect of animal products\nyield on fraction\nof grassland degrading"/>
 				<connector uid="37" angle="12.875">
 					<from>elasticity_of_effect_of_animal_products_yield_on_fraction_of_grassland_degrading</from>
 					<to>effect_of_animal_products_yield_on_fraction_of_grassland_degrading</to>
@@ -7596,13 +7831,13 @@ Used for policy implementation only.</doc>
 					<from>effect_of_animal_products_yield_on_fraction_of_grassland_degrading</from>
 					<to>fraction_of_grassland_degrading</to>
 				</connector>
-				<aux x="915" y="511.04" name="fraction cropland\ndegrading"/>
+				<aux x="971.667" y="652.707" name="fraction cropland\ndegrading"/>
 				<connector uid="39" angle="61.3082">
 					<from>fraction_cropland_degrading</from>
 					<to>degraded_land_from_crops</to>
 				</connector>
-				<aux x="907" y="575.04" name="effect of crop yield\non fraction cropland\ndegrading"/>
-				<aux x="550.5" y="600.92" name="elasticity of effect of crop yield\non fraction cropland\ndegrading"/>
+				<aux x="963.667" y="716.707" name="effect of crop yield\non fraction cropland\ndegrading"/>
+				<aux x="607.167" y="742.587" name="elasticity of effect of crop yield\non fraction cropland\ndegrading"/>
 				<connector uid="40" angle="4.15129">
 					<from>elasticity_of_effect_of_crop_yield_on_fraction_cropland_degrading</from>
 					<to>effect_of_crop_yield_on_fraction_cropland_degrading</to>
@@ -7611,7 +7846,7 @@ Used for policy implementation only.</doc>
 					<from>effect_of_crop_yield_on_fraction_cropland_degrading</from>
 					<to>fraction_cropland_degrading</to>
 				</connector>
-				<aux x="1503" y="641" name="fraction degraded"/>
+				<aux x="1559.67" y="782.667" name="fraction degraded"/>
 				<connector uid="42" angle="8.53077">
 					<from>Habitable_Land_Area</from>
 					<to>fraction_degraded</to>
@@ -7624,53 +7859,53 @@ Used for policy implementation only.</doc>
 					<from>Grassland</from>
 					<to>foresting_grassland</to>
 				</connector>
-				<aux font_style="italic" font_weight="bold" x="1412.5" y="529.04" name="Policy Start Year"/>
+				<aux font_style="italic" font_weight="bold" x="1469.17" y="670.707" name="Policy Start Year"/>
 				<connector uid="45" angle="210.265">
 					<from>Policy_Start_Year</from>
 					<to>foresting_grassland</to>
 				</connector>
-				<stock font_style="italic" font_weight="bold" x="749" y="1107" name="Livestock Yield"/>
+				<stock font_style="italic" font_weight="bold" x="805.667" y="1248.67" name="Livestock Yield"/>
 				<connector uid="46" angle="33.6901">
 					<from>Livestock_Yield</from>
 					<to>effect_of_animal_products_yield_on_fraction_of_grassland_degrading</to>
 				</connector>
-				<aux label_side="left" label_angle="135" x="157.071" y="122.798" name="sensitivity of effect of crop\nbalance on crop land\nexpansion rate"/>
+				<aux label_side="left" label_angle="135" x="213.738" y="264.465" name="sensitivity of effect of crop\nbalance on crop land\nexpansion rate"/>
 				<connector uid="47" angle="291.599">
 					<from>sensitivity_of_effect_of_crop_balance_on_crop_land_expansion_rate</from>
 					<to>effect_of_crop_balance_on_crop_land_expansion</to>
 				</connector>
-				<aux label_side="bottom" x="196.036" y="221.214" name="effect of crop balance on\ncrop land expansion"/>
+				<aux label_side="bottom" x="252.703" y="362.881" name="effect of crop balance on\ncrop land expansion"/>
 				<connector uid="48" angle="1.07682">
 					<from>effect_of_crop_balance_on_crop_land_expansion</from>
 					<to>indicated_cropland</to>
 				</connector>
-				<aux font_style="italic" font_weight="bold" x="23.5714" y="261.792" name="crop balance\nwith reserves"/>
-				<connector uid="49" angle="13.24">
+				<aux font_style="italic" font_weight="bold" x="80.2381" y="403.459" name="crop balance\nwith reserves"/>
+				<connector uid="49" angle="13.2399">
 					<from>crop_balance_with_reserves</from>
 					<to>effect_of_crop_balance_on_crop_land_expansion</to>
 				</connector>
-				<aux x="198.071" y="724.607" name="effect of animal products balance\non grazing land"/>
-				<aux label_side="bottom" x="180.071" y="888.277" name="sensitivity of effect of animal products\nbalance on grassland\nexpansion rate"/>
+				<aux x="254.738" y="866.274" name="effect of animal products balance\non grazing land"/>
+				<aux label_side="bottom" x="236.738" y="1029.94" name="sensitivity of effect of animal products\nbalance on grassland\nexpansion rate"/>
 				<connector uid="50" angle="105.198">
 					<from>sensitivity_of_effect_of_animal_products_balance_on_grassland_expansion_rate</from>
 					<to>effect_of_animal_products_balance_on_grazing_land</to>
 				</connector>
-				<connector uid="51" angle="77.6897">
+				<connector uid="51" angle="87.3929">
 					<from>effect_of_animal_products_balance_on_grazing_land</from>
 					<to>indicated_grazing_land</to>
 				</connector>
-				<aux font_style="italic" font_weight="bold" x="265.714" y="996.429" name="livestock balance\nwith reserves"/>
+				<aux font_style="italic" font_weight="bold" x="322.381" y="1138.1" name="livestock balance\nwith reserves"/>
 				<connector uid="52" angle="91.1691">
 					<from>livestock_balance_with_reserves</from>
 					<to>effect_of_animal_products_balance_on_grazing_land</to>
 				</connector>
-				<aux font_style="italic" font_weight="bold" x="980.714" y="695" name="crop yield"/>
+				<aux font_style="italic" font_weight="bold" x="1037.38" y="836.667" name="crop yield"/>
 				<connector uid="53" angle="118.706">
 					<from>crop_yield</from>
 					<to>effect_of_crop_yield_on_fraction_cropland_degrading</to>
 				</connector>
-				<aux x="1349" y="466" name="forrestible land"/>
-				<aux x="1282" y="641" name="land to forest"/>
+				<aux x="1405.67" y="607.667" name="forrestible land"/>
+				<aux x="1338.67" y="782.667" name="land to forest"/>
 				<connector uid="56" angle="165.964">
 					<from>land_to_forest</from>
 					<to>foresting_grassland</to>
@@ -7679,11 +7914,11 @@ Used for policy implementation only.</doc>
 					<from>forrestible_land</from>
 					<to>foresting_grassland</to>
 				</connector>
-				<flow isee:segment_with_valve="1" x="1166" y="509" name="foresting\ndegraded land">
+				<flow isee:segment_with_valve="1" x="1222.67" y="650.667" name="foresting\ndegraded land">
 					<pts>
-						<pt x="1138.5" y="561"/>
-						<pt x="1166" y="561"/>
-						<pt x="1166" y="445"/>
+						<pt x="1195.17" y="702.667"/>
+						<pt x="1222.67" y="702.667"/>
+						<pt x="1222.67" y="586.667"/>
 					</pts>
 				</flow>
 				<connector uid="58" angle="135">
@@ -7702,10 +7937,10 @@ Used for policy implementation only.</doc>
 					<from>forrestible_land</from>
 					<to>foresting_degraded_land</to>
 				</connector>
-				<flow x="972.75" y="400" name="forresting cropland">
+				<flow x="1029.42" y="541.667" name="forresting cropland">
 					<pts>
-						<pt x="841.25" y="400"/>
-						<pt x="1116.25" y="400"/>
+						<pt x="897.917" y="541.667"/>
+						<pt x="1172.92" y="541.667"/>
 					</pts>
 				</flow>
 				<connector uid="62" angle="13.5284">
@@ -7724,8 +7959,8 @@ Used for policy implementation only.</doc>
 					<from>land_to_forest</from>
 					<to>forresting_cropland</to>
 				</connector>
-				<aux x="1390" y="880.75" name="Forrest Land 1750"/>
-				<aux x="1383" y="755" name="max land to forest"/>
+				<aux x="1446.67" y="1022.42" name="Forrest Land 1750"/>
+				<aux x="1439.67" y="896.667" name="max land to forest"/>
 				<connector uid="66" angle="93.1861">
 					<from>Forrest_Land_1750</from>
 					<to>max_land_to_forest</to>
@@ -7738,17 +7973,17 @@ Used for policy implementation only.</doc>
 					<from>max_land_to_forest</from>
 					<to>land_to_forest</to>
 				</connector>
-				<aux x="1485" y="732" name="timespan for forresting"/>
+				<aux x="1541.67" y="873.667" name="timespan for forresting"/>
 				<connector uid="69" angle="180">
 					<from>timespan_for_forresting</from>
 					<to>max_land_to_forest</to>
 				</connector>
-				<aux font_style="italic" font_weight="bold" x="1285" y="807" name="forestation policy 1"/>
+				<aux font_style="italic" font_weight="bold" x="1341.67" y="948.667" name="forestation policy 1"/>
 				<connector uid="70" angle="91.0354">
 					<from>forestation_policy_1</from>
 					<to>land_to_forest</to>
 				</connector>
-				<aux x="524" y="40.25" name="gross forest land use loss"/>
+				<aux x="580.667" y="181.917" name="gross forest land use loss"/>
 				<connector uid="71" color="#EEEEEE" font_color="#EEEEEE" angle="26.2916">
 					<from>clearing_forest_for_grassland</from>
 					<to>gross_forest_land_use_loss</to>
@@ -7757,7 +7992,7 @@ Used for policy implementation only.</doc>
 					<from>clearing_forests_for_crops</from>
 					<to>gross_forest_land_use_loss</to>
 				</connector>
-				<aux x="344.25" y="35" name="gross grassland land use loss"/>
+				<aux x="400.917" y="176.667" name="gross grassland land use loss"/>
 				<connector uid="73" color="#EEEEEE" font_color="#EEEEEE" angle="149.849">
 					<from>clearing_grassland</from>
 					<to>gross_grassland_land_use_loss</to>
@@ -7774,20 +8009,20 @@ Used for policy implementation only.</doc>
 					<from>reforesting_grassland</from>
 					<to>gross_grassland_land_use_loss</to>
 				</connector>
-				<flow x="994.5" y="22" name="cutting">
+				<flow x="1051.17" y="163.667" name="cutting">
 					<pts>
-						<pt x="752" y="90.583"/>
-						<pt x="752" y="22"/>
-						<pt x="1237" y="22"/>
-						<pt x="1237" y="355"/>
+						<pt x="808.667" y="232.25"/>
+						<pt x="808.667" y="163.667"/>
+						<pt x="1293.67" y="163.667"/>
+						<pt x="1293.67" y="496.667"/>
 					</pts>
 				</flow>
-				<aux x="952.375" y="178" name="normal average\ncutting time"/>
+				<aux x="1009.04" y="319.667" name="normal average\ncutting time"/>
 				<connector uid="78" angle="26.1344">
 					<from>Mature_Forest</from>
 					<to>cutting</to>
 				</connector>
-				<aux x="1581.5" y="160" name="young forest share"/>
+				<aux x="1638.17" y="301.667" name="young forest share"/>
 				<connector uid="79" angle="275.856">
 					<from>
 						<alias uid="80"/>
@@ -7800,7 +8035,7 @@ Used for policy implementation only.</doc>
 					</from>
 					<to>young_forest_share</to>
 				</connector>
-				<aux x="972.75" y="98" name="cutting time"/>
+				<aux x="1029.42" y="239.667" name="cutting time"/>
 				<connector uid="83" angle="69.2697">
 					<from>normal_average_cutting_time</from>
 					<to>cutting_time</to>
@@ -7809,8 +8044,8 @@ Used for policy implementation only.</doc>
 					<from>cutting_time</from>
 					<to>cutting</to>
 				</connector>
-				<aux x="925" y="110.25" name="effect of\nforest size on cutting time"/>
-				<connector uid="85" angle="4.80994">
+				<aux x="981.667" y="251.917" name="effect of\nforest size on cutting time"/>
+				<connector uid="85" angle="8.88774">
 					<from>Mature_Forest</from>
 					<to>effect_of_forest_size_on_cutting_time</to>
 				</connector>
@@ -7818,12 +8053,12 @@ Used for policy implementation only.</doc>
 					<from>effect_of_forest_size_on_cutting_time</from>
 					<to>cutting_time</to>
 				</connector>
-				<aux x="865" y="53" name="sensitivity of cutting time to forest size"/>
+				<aux x="921.667" y="194.667" name="sensitivity of cutting time to forest size"/>
 				<connector uid="87" angle="315.807">
 					<from>sensitivity_of_cutting_time_to_forest_size</from>
 					<to>effect_of_forest_size_on_cutting_time</to>
 				</connector>
-				<stacked_container uid="88" x="1567" y="455" width="465" height="498.5">
+				<stacked_container uid="88" x="1623.67" y="596.667" width="465" height="498.5">
 					<graph width="465" height="498.5" type="area" isee:sum_stacked_legend="true" isee:stacked_show_hover_values="true" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="3" isee:fill_intensity="0.1" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
 						<plot color="blue" isee:keep_zero_visible="true" pen_width="1" index="0" show_y_axis="true">
 							<entity name="Young_Forest[1]"/>
@@ -7842,12 +8077,12 @@ Used for policy implementation only.</doc>
 						</plot>
 					</graph>
 				</stacked_container>
-				<aux x="1016" y="283.25" name="effect of\ncropland size on time in use"/>
+				<aux x="1072.67" y="424.917" name="effect of\ncropland size on time in use"/>
 				<connector uid="89" angle="35.7293">
 					<from>Cropland</from>
 					<to>effect_of_cropland_size_on_time_in_use</to>
 				</connector>
-				<aux x="1086" y="329.5" name="average time\ncropland in use"/>
+				<aux x="1142.67" y="471.167" name="average time\ncropland in use"/>
 				<connector uid="90" angle="347.515">
 					<from>effect_of_cropland_size_on_time_in_use</from>
 					<to>average_time_cropland_in_use</to>
@@ -7860,23 +8095,272 @@ Used for policy implementation only.</doc>
 					<from>average_time_cropland_in_use</from>
 					<to>cropland_depleting</to>
 				</connector>
-				<aux x="994.5" y="220" name="sensitivity of crop land use time to cropland size"/>
+				<aux x="1051.17" y="361.667" name="sensitivity of crop land use time to cropland size"/>
 				<connector uid="93" angle="291.092">
 					<from>sensitivity_of_crop_land_use_time_to_cropland_size</from>
 					<to>effect_of_cropland_size_on_time_in_use</to>
 				</connector>
-				<aux font_style="italic" font_weight="bold" x="292" y="166" name="initial crop yield"/>
-				<alias font_style="italic" uid="16" x="73.5" y="396.375" width="18" height="18">
+				<aux font_style="italic" font_weight="bold" x="348.667" y="307.667" name="initial crop yield"/>
+				<aux label_side="top" x="1428.09" y="1472.34" name="total overburned area\npercent due to climate\nchange"/>
+				<aux x="1361.09" y="1519.42" name="parameter a"/>
+				<aux x="1428.09" y="1519.42" name="parameter b"/>
+				<aux x="1493.59" y="1519.42" name="parameter c"/>
+				<connector uid="145" angle="60.0183">
+					<from>parameter_a</from>
+					<to>total_overburned_area_percent_due_to_climate_change</to>
+				</connector>
+				<connector uid="146" angle="115.607">
+					<from>parameter_c</from>
+					<to>total_overburned_area_percent_due_to_climate_change</to>
+				</connector>
+				<connector uid="147" angle="90">
+					<from>parameter_b</from>
+					<to>total_overburned_area_percent_due_to_climate_change</to>
+				</connector>
+				<text_box uid="148" x="1019.75" y="1324.17" width="260" height="139.17">Gives the total overburned area percent as a function of gmsta, from original overburned area percent by  burton et al 2024; counterfactual mean based on isimip3a data of 7 models used in burton et al; land type fractions based on ourworldindata
+
+get four outputs: grassland, crop, forest young, forest mature burned area in Mha due to cc</text_box>
+				<aux label_side="bottom" x="1275.42" y="1595.34" name="counterfactual aka no climate change\nmean burned area\nMhain 1980"/>
+				<aux x="1446.09" y="1613.92" name="global burned area\ndue to climate change"/>
+				<connector uid="151" angle="352.096">
+					<from>counterfactual_aka_no_climate_change_mean_burned_area_Mhain_1980</from>
+					<to>global_burned_area_due_to_climate_change</to>
+				</connector>
+				<aux label_side="left" label_angle="225" x="1266" y="1697.42" name="fraction of grassland\nburned out of\ntotal burned area"/>
+				<aux x="1315.09" y="1705.42" name="grassland\nburned due to cc\narea"/>
+				<aux label_side="bottom" x="1511.59" y="1708.92" name="fraction of\ncropland\nburned out of\ntotal\nburned area"/>
+				<aux label_side="bottom" x="1446.09" y="1726.92" name="cropland\nburned due\nto cc"/>
+				<connector uid="152" angle="214.933">
+					<from>global_burned_area_due_to_climate_change</from>
+					<to>grassland_burned_due_to_cc_area</to>
+				</connector>
+				<connector uid="153" angle="270">
+					<from>global_burned_area_due_to_climate_change</from>
+					<to>cropland_burned_due_to_cc</to>
+				</connector>
+				<aux x="1601.92" y="1705.42" name="forest\nburned\ndue to cc"/>
+				<connector uid="154" angle="329.579">
+					<from>global_burned_area_due_to_climate_change</from>
+					<to>forest_burned_due_to_cc</to>
+				</connector>
+				<aux label_side="right" x="1634.92" y="1683.92" name="fraction of\nforest\nburned out of total\nburned area"/>
+				<connector uid="155" angle="350.744">
+					<from>fraction_of_grassland_burned_out_of_total_burned_area</from>
+					<to>grassland_burned_due_to_cc_area</to>
+				</connector>
+				<connector uid="156" angle="195.366">
+					<from>fraction_of_cropland_burned_out_of_total_burned_area</from>
+					<to>cropland_burned_due_to_cc</to>
+				</connector>
+				<connector uid="157" angle="198.64">
+					<from>fraction_of_forest_burned_out_of_total_burned_area</from>
+					<to>forest_burned_due_to_cc</to>
+				</connector>
+				<connector uid="158" angle="295.22">
+					<from>total_overburned_area_percent_due_to_climate_change</from>
+					<to>global_burned_area_due_to_climate_change</to>
+				</connector>
+				<aux label_side="bottom" x="1652.92" y="1831.17" name="mature forest\nburned due t\no cc"/>
+				<aux x="1587.42" y="1831.17" name="young forest\nburned due\nto cc"/>
+				<aux x="1502.92" y="1929.17" name="fraction of young\nforest out of total forest"/>
+				<aux x="1744.67" y="1925.17" name="fraction of mature\nforest out of total forest"/>
+				<connector uid="163" angle="114.311">
+					<from>
+						<alias uid="164"/>
+					</from>
+					<to>fraction_of_young_forest_out_of_total_forest</to>
+				</connector>
+				<connector uid="165" angle="146.802">
+					<from>
+						<alias uid="162"/>
+					</from>
+					<to>fraction_of_young_forest_out_of_total_forest</to>
+				</connector>
+				<connector uid="166" angle="73.393">
+					<from>
+						<alias uid="162"/>
+					</from>
+					<to>fraction_of_mature_forest_out_of_total_forest</to>
+				</connector>
+				<connector uid="167" angle="37.6262">
+					<from>
+						<alias uid="164"/>
+					</from>
+					<to>fraction_of_mature_forest_out_of_total_forest</to>
+				</connector>
+				<connector uid="168" angle="55.8403">
+					<from>fraction_of_young_forest_out_of_total_forest</from>
+					<to>young_forest_burned_due_to_cc</to>
+				</connector>
+				<connector uid="169" angle="128.199">
+					<from>fraction_of_mature_forest_out_of_total_forest</from>
+					<to>mature_forest_burned_due_t_o_cc</to>
+				</connector>
+				<connector uid="170" angle="269.119">
+					<from>forest_burned_due_to_cc</from>
+					<to>young_forest_burned_due_to_cc</to>
+				</connector>
+				<connector uid="171" angle="287.835">
+					<from>forest_burned_due_to_cc</from>
+					<to>mature_forest_burned_due_t_o_cc</to>
+				</connector>
+				<aux font_style="italic" font_weight="bold" x="1418.34" y="1323.34" name="Surface Temperature Anomaly"/>
+				<connector uid="172" angle="279.462">
+					<from>Surface_Temperature_Anomaly</from>
+					<to>total_overburned_area_percent_due_to_climate_change</to>
+				</connector>
+				<stacked_container uid="174" x="1953.34" y="1491.67" width="775" height="760">
+					<graph width="775" height="760" type="area" isee:sum_stacked_legend="true" isee:stacked_show_hover_values="true" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="3" isee:fill_intensity="0.1" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
+						<plot color="blue" isee:keep_zero_visible="true" pen_width="2" index="0" show_y_axis="true">
+							<entity name="mature_forest_burned_due_t_o_cc[*]"/>
+						</plot>
+						<plot color="red" isee:keep_zero_visible="true" pen_width="2" index="1" show_y_axis="true">
+							<entity name="young_forest_burned_due_to_cc[*]"/>
+						</plot>
+						<plot color="#008F44" isee:keep_zero_visible="true" pen_width="2" index="2" show_y_axis="true">
+							<entity name="cropland_burned_due_to_cc[*]"/>
+						</plot>
+						<plot color="#FF7F00" isee:keep_zero_visible="true" pen_width="2" index="3" show_y_axis="true">
+							<entity name="grassland_burned_due_to_cc_area[*]"/>
+						</plot>
+					</graph>
+				</stacked_container>
+				<stock label_side="center" x="490.583" y="493.333" width="148.333" height="96.6667" name="Burned Cropland"/>
+				<flow x="699.417" y="530.854" name="burning cropland">
+					<pts>
+						<pt x="747.917" y="530.854"/>
+						<pt x="638.917" y="530.854"/>
+					</pts>
+				</flow>
+				<connector uid="176" angle="339.444">
+					<from>
+						<alias uid="175"/>
+					</from>
+					<to>burning_cropland</to>
+				</connector>
+				<flow x="687.417" y="586.667" name="recovering cropland">
+					<pts>
+						<pt x="638.917" y="586.667"/>
+						<pt x="747.917" y="586.667"/>
+					</pts>
+				</flow>
+				<aux x="589.167" y="635.707" name="time for burned cropland to recover"/>
+				<connector uid="177" angle="30.151">
+					<from>time_for_burned_cropland_to_recover</from>
+					<to>recovering_cropland</to>
+				</connector>
+				<connector uid="178" angle="348.245">
+					<from>Burned_Cropland</from>
+					<to>recovering_cropland</to>
+				</connector>
+				<aux x="1537.92" y="1602.67" name="unit percent"/>
+				<connector uid="179" angle="190.229">
+					<from>unit_percent</from>
+					<to>global_burned_area_due_to_climate_change</to>
+				</connector>
+				<stock label_side="center" x="1311.17" y="212.167" width="197" height="101" name="Burned Forest"/>
+				<flow x="1099.67" y="52.4167" name="burning mature forest">
+					<pts>
+						<pt x="778.667" y="232.25"/>
+						<pt x="778.667" y="52.4167"/>
+						<pt x="1420.67" y="52.4167"/>
+						<pt x="1420.67" y="212.167"/>
+					</pts>
+				</flow>
+				<flow isee:segment_with_valve="1" label_side="top" x="1452.5" y="433.833" name="burning young forest">
+					<pts>
+						<pt x="1322.92" y="542.5"/>
+						<pt x="1452.5" y="542.5"/>
+						<pt x="1452.5" y="313.167"/>
+					</pts>
+				</flow>
+				<flow isee:segment_with_valve="0" x="1363.75" y="415.333" name="recovering forest">
+					<pts>
+						<pt x="1363.75" y="313.167"/>
+						<pt x="1363.75" y="517.5"/>
+						<pt x="1322.92" y="517.5"/>
+					</pts>
+				</flow>
+				<aux x="1323.67" y="361.667" name="time for burned forest to recover"/>
+				<connector uid="180" angle="302.22">
+					<from>time_for_burned_forest_to_recover</from>
+					<to>recovering_forest</to>
+				</connector>
+				<connector uid="181" angle="257.59">
+					<from>Burned_Forest</from>
+					<to>recovering_forest</to>
+				</connector>
+				<connector uid="184" angle="8.91649">
+					<from>
+						<alias uid="183"/>
+					</from>
+					<to>burning_mature_forest</to>
+				</connector>
+				<connector uid="185" angle="87.3824">
+					<from>
+						<alias uid="182"/>
+					</from>
+					<to>burning_young_forest</to>
+				</connector>
+				<stock label_side="center" x="491.042" y="952.542" width="196.25" height="103.75" name="Burned Grassland"/>
+				<flow x="668.542" y="919.667" name="burning grassland">
+					<pts>
+						<pt x="747.917" y="919.667"/>
+						<pt x="589.167" y="919.667"/>
+						<pt x="589.167" y="952.542"/>
+					</pts>
+				</flow>
+				<flow x="736.146" y="978.667" name="recovering grassland">
+					<pts>
+						<pt x="687.292" y="978.667"/>
+						<pt x="785" y="978.667"/>
+						<pt x="785" y="924.747"/>
+					</pts>
+				</flow>
+				<aux x="721.25" y="1045" name="time for grassland to recover"/>
+				<connector uid="186" angle="75.4655">
+					<from>time_for_grassland_to_recover</from>
+					<to>recovering_grassland</to>
+				</connector>
+				<connector uid="187" angle="357.988">
+					<from>Burned_Grassland</from>
+					<to>recovering_grassland</to>
+				</connector>
+				<connector uid="188" angle="265.308">
+					<from>
+						<alias uid="189"/>
+					</from>
+					<to>burning_grassland</to>
+				</connector>
+				<alias font_style="italic" uid="16" x="130.167" y="538.042" width="18" height="18">
 					<of>fraction_of_grassland_for_grazing</of>
 				</alias>
-				<alias font_style="italic" uid="25" x="1054.5" y="1029.5" width="18" height="18">
+				<alias font_style="italic" uid="25" x="1111.17" y="1171.17" width="18" height="18">
 					<of>time_to_close_grassland_gap</of>
 				</alias>
-				<alias font_style="italic" uid="80" x="1551.5" y="35.5" width="45" height="35">
+				<alias font_style="italic" uid="80" x="1608.17" y="177.167" width="45" height="35">
 					<of>Mature_Forest</of>
 				</alias>
-				<alias font_style="italic" uid="82" x="1585.5" y="249.5" width="45" height="35">
+				<alias font_style="italic" uid="82" x="1642.17" y="391.167" width="45" height="35">
 					<of>Young_Forest</of>
+				</alias>
+				<alias font_style="italic" uid="162" x="1655.42" y="2010.42" width="150" height="90">
+					<of>Young_Forest</of>
+				</alias>
+				<alias font_style="italic" uid="164" x="1462.92" y="2010.42" width="150" height="90">
+					<of>Mature_Forest</of>
+				</alias>
+				<alias font_style="italic" uid="175" x="581" y="427.667" width="18" height="18">
+					<of>cropland_burned_due_to_cc</of>
+				</alias>
+				<alias font_style="italic" uid="182" x="1408.5" y="462.167" width="18" height="18">
+					<of>young_forest_burned_due_to_cc</of>
+				</alias>
+				<alias font_style="italic" uid="183" x="1010.38" y="64.75" width="18" height="18">
+					<of>mature_forest_burned_due_t_o_cc</of>
+				</alias>
+				<alias font_style="italic" uid="189" x="667.25" y="816.747" width="18" height="18">
+					<of>grassland_burned_due_to_cc_area</of>
 				</alias>
 			</view>
 		</views>
@@ -8330,7 +8814,7 @@ Used for policy implementation only.</doc>
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="768" page_height="576" isee:page_cols="2" isee:page_rows="2" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="758" page_height="574" isee:page_cols="2" isee:page_rows="2" zoom="60" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -8808,7 +9292,7 @@ Used for policy implementation only.</doc>
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="768" page_height="576" isee:page_cols="3" isee:page_rows="2" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="758" page_height="574" isee:page_cols="3" isee:page_rows="2" isee:scroll_y="311" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -10287,7 +10771,7 @@ https://doi.org/10.1126/science.1201609</doc>
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="768" page_height="576" isee:page_cols="4" isee:page_rows="3" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="758" page_height="574" isee:page_cols="4" isee:page_rows="3" isee:scroll_x="503.75" isee:scroll_y="352.5" zoom="80" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
